@@ -1,0 +1,342 @@
+<!--HTML and CSS Combined-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*41 - Simple Header w inline CSS*/
+            header {
+                background-color: lightgoldenrodyellow;
+                padding: 20px;
+                text-align: center;
+            }
+
+            /*42 - Two Column Layout*/
+            .left {
+                float: left;
+                width: 50%;
+                background: lightgray;
+                padding: 20px;
+            }
+            .right {
+                float: right;
+                width: 50%;
+                background: lightcoral;
+                padding: 20px;
+            }
+
+            /*43 - CSS Max Width*/
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /*44 - Navigation Bar*/
+            ul {
+                list-style-type: none;
+                background: #333;
+                padding: 0;
+                margin: 0;
+            }
+
+            /*45 - Styled Button w Hover*/
+            .btn {
+                background: yellow;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+            }
+            .btn:hover {
+                background: darkgoldenrod;
+            }
+
+            /*46 - Simple form Styling*/
+            form {
+                width: 300px;
+                margin: 20px auto;
+            }
+            input, textarea {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 8px;
+            }
+
+            /*47 - Card Layout*/
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 20px;
+                width: 250px;
+                margin: 10px auto;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /*48 - Modal Simulation*/
+            .modal {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 20px;
+                border: 1px solid black;
+            }
+
+            .modal .show {
+                display: block;
+            }
+
+            /*49 - Grid Layout*/
+            .row {
+                display: flex;
+            }
+            .col {
+                flex: 1;
+                margin: 5px;
+                padding: 20px;
+                background: lightyellow;
+            }
+
+            /*50 - Dropdown Menu*/
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background: white;
+                border: 1px solid #ccc;
+                min-width: 120px;
+            }
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+
+            /*51 - Centerning Content*/
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            /*52 - Sticky Header*/
+            header {
+                position: sticky;
+                top: 0;
+                background: lightyellow;
+                padding: 15px;
+            }
+
+            /*53 - Fixed Footer*/
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background: gray;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+
+            /*54 - Responsive Columns*/
+            .col {
+                float: left;
+                width: 33.3%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            /*55 - Image Gallery w Flexbox*/
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .gallery img {
+                width: 30%;
+                margin: 1%;
+            }
+
+            /*56 - Profile Card Layout*/
+            .card {
+                width: 250px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 15px;
+                text-align: center;
+            }
+            .card img {
+                width: 100px;
+                border-radius: 50%;
+            }
+
+            /*57 - Simple Banner Section*/
+            .banner {
+                background-color: lightyellow;
+                padding: 5px;
+                text-align: center;
+            }
+
+            /*58 - Responsive NavBar w Flexbox*/
+            nav {
+                display: flex;
+                justify-content: space-between;
+                background: #333;
+                padding: 10px;
+            }
+            nav a {
+                color: white;
+                margin: 0 10px;
+                text-decoration: none;
+            }
+
+            /*59 - Pricing Table Layout*/
+            .pricing {
+                display: flex;
+                justify-content: center;
+            }
+            .plan {
+                border: 1px solid #ccc;
+                padding: 20px;
+                margin: 10px;
+                width: 200px;
+                text-align: center;
+            }
+
+            /*60 - Simple Sidebar Layout*/
+            .sidebar {
+                width: 200px;
+                float: left;
+                background: lightyellow;
+                height: 100vh;
+                padding: 20px;
+            }
+            .content {
+                margin-left: 220px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--41 - Simple Header-->
+        <header>
+            <h1>Sunflemon's Portfolio</h1>
+        </header>
+
+        <!--42 - Two Column Layout-->
+        <div class="left">Left Content</div>
+        <div class="right">Right Content</div>
+
+        <!--43 - CSS Max Width-->
+        <img src="https://via.placeholder.com/600x300" alt="Sample Image">
+
+        <!--44 - Nav Bar-->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!--45 - Button-->
+        <button class="btn">Click Here!</button>
+
+        <!--46 - Simple Form Styling-->
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+        </form>
+
+        <!--47 - Card Layout-->
+        <div class="card">
+            <h3>Loyalty Card</h3>
+            <p>This card belongs to the artist, Sunflemon, where her socials, and contact information is stored.</p>
+        </div>
+
+        <!--48 Modal Simulation-->
+        <button onclick="document .getElementById('myModal') .classList .add('show')">Open Modal</button>
+        <div id="myModal" class="modal">
+            <p>This is a Modal! Cool, right?</p>
+        </div>
+
+        <!--49 - Grid Layout-->
+        <div class="row">
+            <div class="col">Column 1</div>
+            <div class="col">Column 2</div>
+            <div class="col">Column 3</div>
+        </div>
+
+        <!--50 - Dropdown Menu-->
+        <div class="dropdown">
+            <button>Menu</button>
+            <div class="dropdown-content">
+                <p><i>Are you an Artist or just here to appreciate?</i></p>
+                <p>Artist</p>
+                <p>Admire 2</p>
+            </div>
+        </div>
+
+        <!--51 - Centering Content w Flexbox-->
+        <div class="center">
+            <h1>Hi hellooo, this text is centered.</h1>
+        </div>
+
+        <!--52 - Sticky Header-->
+        <header>Sticky Header</header>
+        <p>Scroll down...</p>
+        <div style="height: 1500px;"></div>
+
+        <!--53 - Fixed Footer-->
+        <p>The content of this page will be put here.</p>
+        <footer>Fixed Footer</footer>
+
+        <!--54 - Responsive Columns-->
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+        <div class="col">Column 3</div>
+
+        <!--55 - Image Gallery w Flexbox-->
+        <div class="gallery">
+            <img src="https://share.google/images/NBrznUlIGwtb37GTL" alt="Anthony Mackie Dance">
+            <img src="https://share.google/images/og7gqUneRZpin1NNg" alt="Anthony Mackie Face">
+            <img src="https://share.google/images/FNKsePcKkoBWDDJRO" alt="Stackie">
+        </div>
+
+        <!--56 - Profile Card Layout-->
+        <div class="card">
+            <img src="https://share.google/images/rRTFenXBtzAksLpF8">
+            <h3>Sunflemon</h3>
+            <p>Artist and future Animator.</p>
+        </div>
+
+        <!--57 - Simple Banner Section-->
+        <div class="banner">
+            <h1>Welcome to Sunflemon's Website of Art!</h1>
+            <p>Fueled by sunflowers, and the passion of a thousand stars.</p>
+        </div>
+
+        <!--58 - Responsive NavBar w Flexbox-->
+        <nav>
+            <div>Logo</div>
+            <div>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+            </div>
+        </nav>
+
+        <!--59 - Pricing Table Layout-->
+        <div class="pricing">
+            <div class="plan">Basic</div>
+            <div class="plan">Standard</div>
+            <div class="plan">Premium</div>
+        </div>
+
+        <!--60 - Simple Sidebar Layout-->
+        <div class="sidebar">Sidebar</div>
+        <div class="sidebar">Main Content</div>
+    </body>
+</html>

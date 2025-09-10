@@ -1,0 +1,221 @@
+/*CSS EXERCISES 1 to 20 - Tag Selectors*/
+
+/*Style <h1> - changes text color*/
+h1 {
+    color: yellow;
+}
+
+/*Style <p> - changes size of all p*/
+/*Style <p> with line-height*/
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*Style <h2>*/
+h2 {
+    text-align: center;
+}
+
+/*Background*/
+body {
+    background-color: lightyellow;
+}
+
+/*<h3> with uppercase text*/
+h3 {
+    text-transform: uppercase;
+}
+
+/*<a> links*/
+a {
+    color: red;
+    text-decoration: none;
+}
+
+/*Unordered <ul>*/
+ul {
+    list-style-type: circle;
+}
+
+/*Ordered <ol>*/
+ol {
+    list-style-type: upper-roman;
+}
+
+/*Lists <li>*/
+li {
+    margin: 5px;
+}
+
+/*Table <table>*/
+table {
+    border: 1px solid black;
+}
+
+/*<th> header*/
+th {
+    background-color: lightgoldenrodyellow;
+}
+
+/*<td>*/
+td {
+    padding: 10px;
+}
+
+/*Image <img>*/
+img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+/*Button <button>*/
+button {
+    background-color: lightcoral;
+    color: white;
+    padding: 8px;
+}
+
+/*Form <form> border*/
+form {
+    border: 1px solid yellow;
+    padding: 15px;
+}
+
+/*Input <input> fields*/
+input {
+    border: 2px solid red;
+}
+
+/*Text Area <textarea>*/
+textarea {
+    width: 300px;
+    height: 100px;
+}
+
+/*Audio <audio>*/
+audio {
+    width: 250px;
+}
+
+/*Video <video>*/
+video {
+    border: 5px solid black;
+}
+
+/*CSS EXERCISES 21 to 30 - ID Selectors*/
+
+/*<h1> by ID*/
+#main-title {
+    color: darkred;
+    font-size: 30px;
+}
+
+/*<p> by ID*/
+#intro-text {
+    font-style: italic;
+}
+
+/*Table <table> by ID*/
+#student-table {
+    border-collapse: collapse;
+}
+
+/*Image <img> by ID*/
+#profile-pic {
+    border-radius: 50%;
+}
+
+/*Button <button> by ID*/
+#submit-btn {
+    background-color: yellow;
+    padding: 10px;
+}
+
+/*<div> by ID*/
+#container {
+    margin: 20px;
+    padding: 20px;
+    background-color: lightyellow;
+}
+
+/*Input <input> by ID*/
+#email-field {
+    border: 1px solid red;
+}
+
+/*Link by ID*/
+#home-link {
+    color: orange;
+}
+
+/*Form <form> by ID*/
+#login-form {
+    background: lightyellow;
+    padding: 15px;
+}
+
+/*Heading <head> by ID*/
+#footer-text {
+    text-align: right;
+}
+
+/*CSS EXERCISES 31 to 40 - Class Selectors*/
+
+/*Multiple <p> with class*/
+.paragraph {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*Headings*/
+.title {
+    color: maroon;
+}
+
+/*Buttons*/
+.btn {
+    background-color: crimson;
+    color: lightcoral;
+    padding: 10px 15px;
+}
+
+/*Images*/
+.rounded-img {
+    border-radius: 15px;
+}
+
+/*div containters*/
+.card {
+    border: 1px solid whitesmoke;
+    padding: 20px;
+    margin: 10px;
+}
+
+/*Highlighted Text*/
+.highlight {
+    background-color: orange;
+}
+
+/*Navigation Links*/
+.nav-link {
+    color: darkgreen;
+    margin-right: 15px;
+}
+
+/*List items*/
+.list-item {
+    font-weight: bold;
+}
+
+/*Form Inputs*/
+.input-field {
+    border: 2px solid gray;
+    padding: 5px;
+}
+
+/*Footer text*/
+.footer-note {
+    font-size: 12px;
+    color: darkgray;
+}
