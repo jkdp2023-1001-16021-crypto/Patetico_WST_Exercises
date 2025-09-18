@@ -1,0 +1,175 @@
+<!--HTML Form Exercises-->
+
+<!DOCTYPE html>
+<html>
+    <header><title>HTML Forms</title></header>
+
+    <body>
+        <!--1: Create Basic Log In Form & 6: Validation-->
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required minlength="3" maxlength="10"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required><br><br>
+            <!--9: Toggle Password Visibility-->
+            <button type="button" onclick="togglePwd()">Show/Hide</button>
+            <script>
+                function togglePwd(){
+                    const password = document.getElementById("password");
+                    password.type = password.type === "password" ? "text" : "password";
+                }
+            </script>
+
+            <button type="submit">Log In</button>
+
+            <!--7: Add JS alert on Submit (Native JS)-->
+            <script>
+                document.getElementById("loginForm").addEventListener("submit", function() {
+                    event.preventDefault();
+                    alert("Form submitted!");
+                });
+            </script>
+        </form>
+
+        <!--2: Add Email Input and Placeholder & 6: Validation-->
+        </br>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!--3 Add Radio Buttons and Checkboxes-->
+        <p>Choose Your Role:</p>
+        <input type="radio" id="student" name="role" value="student">
+        <label for="student">Student</label></br>
+        <input type="radio" id="teacher" name="role" value="teacher">
+        <label for="teacher">Teacher</label></br>
+
+        <p>Select Your Gender:</p>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label></br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label></br>
+        <input type="radio" id="non-binary" name="gender" value="non-binary">
+        <label for="non-binary">Non-Binary</label></br>
+        <input type="radio" id="not-to-say" name="gender" value="not-to-say">
+        <label for="not-to-say">Prefer not to say</label></br>
+
+        <p>Select Your Interests:</p>
+        <input type="checkbox" id="animation" name="interest" value="animation">
+        <label for="animation">Animation :D</label></br>
+        <input type="checkbox" id="video-editing" name="interest" value="video-editing">
+        <label for="video-editing">Video Editing :O</label></br>
+        <input type="checkbox" id="td-modeling" name="interest" value="td-modeling">
+        <label for="td-modeling">3d Modeling >:T</label></br>
+        <input type="checkbox" id="baking" name="interest" value="baking">
+        <label for="baking">Baking :3</label></br></br>
+
+        <!--4: Add a Dropdown (Select Menu)-->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="ph">Philippines</option>
+            <option value="th">Thailand</option>
+            <option value="vt">Vietnam</option>
+            <option value="sg">Singapore</option>
+            <option value="hk">Hong Kong</option>
+            <option value="sw">Switzerland</option>
+            <option value="au">Australia</option>
+            <option value="tw">Taiwan</option>
+        </select>
+        </br></br>
+
+        <!--5: Add a text Area-->
+        <label for="message">Your Message:</label></br>
+        <textarea id="message" name="message" rows="4" cols="40"></textarea>
+        </form>
+
+        <!--8: Show Live Character Count-->
+        <textarea id="bio" maxlength="100"></textarea>
+        <p id="count">0/100</p>
+
+        <script>
+            const bio = document.getElementById("bio");
+            const count = document.getElementById("count");
+
+            bio.addEventListener("input", function() {
+                count.textContent = bio.value.length + "/100";
+            });
+        </script>
+
+        <!--10: jQuery version of Submit Alert-->
+        <form id="myForm">
+            <input type="text" required>
+            <button type="submit">Submit</button></br>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $("#myForm").submit(function(event){
+                event.preventDefault();
+                alert("Form submitted with jQuery!");
+            });
+        </script>
+
+        <!--11: Toggle Password Visibility with jQuery-->
+        <input type="password" id="pwd">
+        <button id="toggle">Show/Hide</button></br>
+
+        <script>
+            $("#toggle").click(function(){
+                let pwd = $("#pwd");
+                pwd.attr("type", pwd.attr("type") === "password" ? "text" : "password");
+            });
+        </script>
+
+        <!--12: jQuery Live Character Count-->
+        <textarea id="bio" maxlength="100"></textarea>
+        <p id="count">0/100</p>
+
+        <script>
+            $("#bio").on("input", function(){
+                $("#count").text($(this).val().length + "/100");
+            });
+        </script>
+
+        <!--13: Validate Empty Field with jQuery-->
+        <form id="login">
+            <p>Username: <input type="text" id="user" placeholder="Username"></p>
+            <p>Password: <input type="password" id="pass" placeholder="Password"></p>
+            <button type="submit">Log In</button>
+        </form></br>
+
+        <script>
+            $("#login").submit(function(e){
+                e.preventDefault();
+                if($("#user").val() === "" || $("#pass").val() === ""){
+                    alert("Please fill in all fields");
+                } else {
+                    alert("Log In Successful!");
+                }
+            });
+        </script>
+
+        <!--14: Add CSS Highlight for Errors with jQuery-->
+        <style>
+            .error { border : 2px solid red; }
+        </style>
+
+        <form id="formCheck">
+            <input type="text" id="name" placeholder="Name"></br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            $("#formCheck").submit(function(e){
+                e.preventDefault();
+                if($("#name").val() === ""){
+                    $("#name").addClass("error");
+                } else {
+                    $("#name").removeClass("error");
+                    alert("Form Submitted!");
+                }
+            });
+        </script>
+    </body>
+</html>
